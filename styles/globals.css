@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /*body {*/
+  /*  @apply bg-primary-white;*/
+  /*}*/
+  .custom-select.ant-select
+    .ant-select-focused:not(.ant-select-disabled).ant-select:not(
+      .ant-select-customize-input
+    )
+    .ant-select-selector {
+    @apply shadow-none;
+  }
+  .custom-select .ant-select-selector {
+    @apply mt-0 h-[45px] px-[8px] py-[7px]  w-full  !important;
+  }
+
+  .custom-select .ant-select-selection-search {
+    @apply flex items-center left-[3px];
+  }
+  .custom-button.ant-btn {
+    @apply w-full h-14 items-center flex justify-between bg-primary;
+  }
+  .custom-button.ant-btn:not(:disabled):hover {
+    @apply border-primary text-primary;
+  }
+ .custom-button.ant-btn[disabled] {
+   @apply bg-gray-400;
+ }
+
+  .cart-button.ant-btn {
+    @apply bg-primary border-primary w-full px-4 py-8 flex space-x-1 justify-between items-center;
+  }
+
+  .cart-button.ant-btn:not(:disabled):hover {
+    @apply bg-primary border-primary;
+  }
+  .custom-drawer .ant-drawer-body {
+    @apply p-0;
+  }
+
+  .custom-phone .react-tel-input input {
+    @apply w-full;
+  }
+  .custom-form label,
+  .ant-form-item-label > label {
+    @apply text-sm text-gray-700 font-medium font-pop !important;
+  }
+  .custom-form label,
+  .ant-form-item-label > label::after {
+    /*@apply hidden;*/
+  }
+  .ant-form-item-has-error
+    .ant-select:not(.ant-select-disable):not(
+      .ant-select-customize-input
+    ).ant-select-selector {
+    @apply border border-red-600;
+  }
+
+  .custom-input.ant-input {
+    @apply py-[11px] px-[14px];
+  }
+
+  .custom-modal .ant-modal-content {
+    @apply py-[30px] px-[24px] lg:py-[36px] lg:px-[43px] rounded-[12px];
+  }
+  .custom-modal .ant-modal-header {
+    @apply border-0 rounded-[12px] p-0 flex justify-center;
+  }
+  .custom-modal .ant-modal-header h1 {
+    @apply text-black text-2xl font-pop font-bold text-center;
+  }
+  .custom-modal .ant-modal-header p {
+    @apply text-primary text-base font-pop font-normal text-center;
+  }
+
+  .custom-pass .ant-input-affix-wrapper.ant-input-password {
+    @apply py-[11px] px-[14px];
+  }
+}
+img,
+video,
+iframe {
+  max-inline-size: 100%;
+  block-size: auto;
+  max-width: 100%;
+}
